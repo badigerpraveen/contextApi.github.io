@@ -8,10 +8,14 @@ import COunterThree from './components/CounterThree';
 import {useReducer} from 'react';
 import ComponentD from './components/ComponentD'; 
 import ComponentE from './components/ComponentE';
-import ComponentF from './components/ComponentF';
+import ComponentF from './components/ComponentF'; 
+import ApiDtatUsereducer from './components/ApidataUsereducer'; 
+import ApidataUsereducerTwo from './components/ApidadUsereducerTwo';
+import ParentComponent from './components/ParentComponent';
 export const userContext = React.createContext();
 export const  contextAPI = React.createContext() ;
 export const countContext = React.createContext() ;
+                         
 console.log(users); 
 
 const intialState = 0 ;
@@ -26,8 +30,7 @@ const reducer = (state ,action )=>{
       default :
        return state  
     }
-   
-}
+   }
 
 
 function App() { 
@@ -55,9 +58,13 @@ function App() {
        Count {count}
       <ComponentD/> 
       <ComponentE/>
-      <ComponentF/>
-     </countContext.Provider>
-    </div>
+      <ComponentF/> 
+      <ApiDtatUsereducer/> 
+      <ApidataUsereducerTwo/>
+      <ParentComponent/>
+     </countContext.Provider> 
+
+     </div>
   );
 }
 
